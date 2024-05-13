@@ -33,7 +33,8 @@ export default function TabLayout() {
             <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
           ),
         }}
-      />  <Tabs.Screen
+      />
+      <Tabs.Screen
         name="Notification"
         options={{
           headerShown: false,
@@ -41,7 +42,8 @@ export default function TabLayout() {
             <TabBarIcon name={'notifications-sharp'} color={color} />
           ),
         }}
-      />  <Tabs.Screen
+      />
+      <Tabs.Screen
         name="Order"
         options={{
           headerShown: true,
@@ -59,7 +61,8 @@ export default function TabLayout() {
             <TabBarIcon name={focused ? 'restaurant' : 'restaurant-outline'} color={color} />
           ),
         }}
-      />  <Tabs.Screen
+      />
+      <Tabs.Screen
         name="History"
         options={{
           headerShown: false,
@@ -67,7 +70,8 @@ export default function TabLayout() {
             <TabBarIcon designCategory={'entypo'} name={'back-in-time'} color={color} />
           ),
         }}
-      />  <Tabs.Screen
+      />
+      <Tabs.Screen
         name="Cart"
         options={{
           headerShown: false,

@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import CustomField from '@/components/Inputs/InputField'
 import CustomButton from '@/components/Button'
 import { Link } from 'expo-router'
-import { AntDesign, Entypo, Ionicons } from '@expo/vector-icons'
+import { AntDesign, Entypo, FontAwesome5, Ionicons } from '@expo/vector-icons'
 
 const signup = () => {
     const [form, setForm] = useState({
@@ -18,7 +18,7 @@ const signup = () => {
             <View className='flex flex-col pb-2'>
                 <CustomField icon={<Ionicons color={"#a6adc0"} name='person' size={20} />} handleChange={(e: any) => setForm({ ...form, username: e })} value={form.username} placeHolder='Full Name' />
                 <CustomField icon={<AntDesign color={"#a6adc0"} name='phone' size={20} />} handleChange={(e: any) => setForm({ ...form, phoneNumber: e })} value={form.phoneNumber} placeHolder='Phone Number' keyboardType='phone-pad' />
-                <CustomField icon={<Ionicons color={"#a6adc0"} name='chatbox' size={20} />} handleChange={(e: any) => setForm({ ...form, email: e })} value={form.email} placeHolder='Your Email' secureTextEntry={true} keyboardType='email-address' />
+                <CustomField icon={<FontAwesome5 color={"#a6adc0"} name='envelope' size={20} />} handleChange={(e: any) => setForm({ ...form, email: e })} value={form.email} placeHolder='Your Email' secureTextEntry={true} keyboardType='email-address' />
             </View>
             <CustomButton text='Proceed' textStyles='text-white text-center text-lg font-semibold' className="font-medium  bg-primary rounded-xl w-full" onPress={() => { }} />
             <View className='flex flex-row justify-evenly items-center gap-x-4'>

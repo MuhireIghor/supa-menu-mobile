@@ -1,5 +1,6 @@
 import { View, Text, Image, ImageSourcePropType, TouchableOpacity } from 'react-native'
 import React, { FC } from 'react'
+import { router } from 'expo-router';
 export interface IRestaurantCardProp {
     id: string;
     image: ImageSourcePropType;
@@ -9,7 +10,7 @@ export interface IRestaurantCardProp {
 
 const RestaurantCard: FC<IRestaurantCardProp> = (prop) => {
     return (
-        <TouchableOpacity activeOpacity={0.8} onPress={() => { }} className='w-[90%] flex flex-row gap-x-4 items-center bg-gray-300 rounded-xl p-2 my-2 mx-auto'>
+        <TouchableOpacity activeOpacity={0.8} onPress={() => { router.push("/chooseDestination") }} className='w-[90%] flex flex-row gap-x-4 items-center bg-gray-300 rounded-xl p-2 my-2 mx-auto'>
             <Image source={prop.image} className='w-20 h-20 rounded-xl' resizeMode='contain' />
             <View className='flex flex-col '>
                 <Text className='text-gray-200 font-semibold text-md'>Choose {prop.location}</Text>
