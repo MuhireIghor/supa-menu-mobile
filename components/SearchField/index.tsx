@@ -13,17 +13,20 @@ interface ICustomSearchFieldProps {
 }
 const SearchComponent: FC<ICustomSearchFieldProps> = (prop) => {
     return (
-        <TextInput
-            className="p-1"
-            onChangeText={prop.handleChange}
-            value={prop.value}
-            keyboardType={prop.keyboardType}
-            secureTextEntry={prop.secureTextEntry}
-            placeholder={prop.placeHolder}
-            underlineColorAndroid="transparent"
-            placeholderTextColor={"#979fb6"}
+        <View className='w-full'>
 
-        />
+            <TextInput
+                className="p-1"
+                onChangeText={prop.handleChange}
+                value={prop.value}
+                keyboardType={prop.keyboardType}
+                secureTextEntry={prop.secureTextEntry}
+                placeholder={prop.placeHolder}
+                underlineColorAndroid="transparent"
+                placeholderTextColor={"#979fb6"}
+    
+            />
+        </View>
     )
 }
 

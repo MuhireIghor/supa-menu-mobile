@@ -11,7 +11,6 @@ import SearchComponent from '@/components/SearchField';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
-  const [query, setSearchQuery] = useState("")
   return (
     <Tabs
 
@@ -46,17 +45,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="Order"
         options={{
-          headerShown: true,
-          header: () => {
-            return (
-              <View className='flex flex-row gap-x-20 w-full items-center bg-white my-2'>
-                <View className='bg-gray-100 w-10 h-10 rounded-md flex items-center justify-center'>
-                  <AntDesign name='arrowleft' size={15} color={"#f7941d"} />
-                </View>
-                <SearchComponent handleChange={(e: any) => setSearchQuery(e)} value={query} placeHolder='Search...' />
-              </View>
-            )
-          },
+          headerShown: false,
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon name={focused ? 'restaurant' : 'restaurant-outline'} color={color} />
           ),

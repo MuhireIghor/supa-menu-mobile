@@ -22,8 +22,8 @@ const CartItem: FC<ICartItemProp> = (prop) => {
         <SafeAreaView>
             <TouchableOpacity activeOpacity={0.8} onPress={() => { router.push("/chooseDestination") }} className=' w-full flex flex-row gap-x-4 items-center bg-gray-300 rounded-xl p-2 my-2 mx-auto '>
                 <Image source={prop.image} className='w-20 h-20 rounded-xl' resizeMode='contain' />
-                <View className='flex flex-col w-full'>
-                    <View className='w-[90%]overflow-x-scroll flex flex-row '>
+                <View className='flex flex-col flex-1 w-full'>
+                    <View className='w-[90%] flex flex-row flex-wrap'>
                         {prop.ingredients.map((ingredient, index) => {
                             return (
                                 <Text key={index} className=''>{ingredient}{index + 1 != prop.ingredients.length && <Text>, </Text>} </Text>
@@ -36,10 +36,10 @@ const CartItem: FC<ICartItemProp> = (prop) => {
                     </View>
                     <View className="w-full flex flex-row justify-between">
                         <Text className="text-primary text-lg font-semibold">Frw {prop.unitPrice * quantity}</Text>
-                        <View className="bg-[red] p-3  rounded-md flex flex-row justify-around items-center">
-                            <TouchableOpacity onPress={handleDecrease} ><Text className="text-primary text-lg">-</Text></TouchableOpacity>
+                        <View className="bg-white p-1 w-20 rounded-md flex flex-row justify-between items-center gap-x-3">
+                            <TouchableOpacity onPress={handleDecrease} ><Text className="text-primary text-xl">-</Text></TouchableOpacity>
                             <Text className="text-lg text-black font-semibold">{quantity}</Text>
-                            <TouchableOpacity onPress={handleIncrease} ><Text className="text-primary text-lg">+</Text></TouchableOpacity>
+                            <TouchableOpacity onPress={handleIncrease} ><Text className="text-primary text-xl">+</Text></TouchableOpacity>
                         </View>
                     </View>
 

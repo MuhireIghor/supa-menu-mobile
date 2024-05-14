@@ -34,8 +34,11 @@ export default function RootLayout() {
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="(qr)" options={{ headerShown: false }} />
         <Stack.Screen name="chooseDestination" options={{ headerShown: false }} />
+        <Stack.Screen name="paymentConfirmation" options={{ headerShown: false }} />
+        <Stack.Screen name="Rating" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
+
       </Stack>
     </ThemeProvider>
-);
+  );
 }

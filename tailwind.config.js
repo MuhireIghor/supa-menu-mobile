@@ -5,6 +5,7 @@ module.exports = {
         extend: {
             colors: {
                 primary: "#f7941d",
+                "primary-tint": "#d98155",
                 secondary: {
                     DEFAULT: "#FF9C01",
                     100: "#FF9001",
@@ -18,12 +19,12 @@ module.exports = {
                 gray: {
                     100: "#a6adc0",
                     200: "#979fb6",
-                    300:"#f8f8fb"
+                    300: "#f8f8fb"
                 },
                 blue: {
                     100: "#233363",
                     200: "#2e3235",
-                    300:"#fffffe"
+                    300: "#fffffe"
                 }
             },
             fontFamily: {

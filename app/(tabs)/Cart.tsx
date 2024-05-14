@@ -4,7 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import CartItem, { ICartItemProp } from '@/components/Cards/CartItem';
 import Food from "@/assets/food.jpeg"
 import { IRestaurantCardProp } from '@/components/Cards/Restaurant';
-import { Link } from 'expo-router';
+import { Link, router } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import CustomButton from '@/components/Button';
 
@@ -40,7 +40,7 @@ const CartTab = () => {
         <CartItem {...item} />
     )
     return (
-        <SafeAreaView className='h-full bg-white '>
+        <SafeAreaView className='h-full bg-white p-2'>
             <FlatList
                 ListHeaderComponent={() => {
                     return (
@@ -72,8 +72,9 @@ const CartTab = () => {
 
                             </View>
                             <View>
-                                <CustomButton onPress={() => { }} text='Proceed to checkout' textStyles='text-white p-2 text-center text-lg' className='py-8 rounded-2xl' />
+                                <CustomButton onPress={() => router.push("/paymentConfirmation")} text='Proceed to checkout' textStyles='text-white p-2 text-center text-lg' className='py-8 rounded-2xl' />
                             </View>
+                       
 
                         </View>
                     )
