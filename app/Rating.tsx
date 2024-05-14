@@ -17,11 +17,10 @@ const RatingScreen = () => {
                 <View className="flex flex-row gap-x-6 justify-center">
                     {[1, 2, 3, 4, 5].map((item: any, index: any) => {
                         return (
-                            <Pressable onPress={() => setCount(index+1)} key={index}>
-                                {
-                                    index >= count ? <Ionicons name="star-outline" size={25} color={"#f7941d"} /> :
-                                        <AntDesign color={"#f7941d"} name={'star'} size={25} />
-                                }
+                            <Pressable onPress={() => setCount(index + 1)} key={index}>
+
+                                <AntDesign color={index >= count ? '#ffffff':"#f7941d"  } name={'star'} size={25} />
+
                             </Pressable>
                         )
                     })}
