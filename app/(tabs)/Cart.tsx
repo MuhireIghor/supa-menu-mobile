@@ -72,7 +72,7 @@ const CartTab = () => {
 
                             </View>
                             <View>
-                                <CustomButton onPress={() => router.push("/paymentConfirmation")} text='Proceed to checkout' textStyles='text-white p-2 text-center text-lg' className='py-8 rounded-2xl' />
+                                <CustomButton onPress={() => router.push("/Payment")} text='Proceed to checkout' textStyles='text-white p-2 text-center text-lg' className='py-8 rounded-2xl' />
                             </View>
                        
 

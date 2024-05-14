@@ -47,9 +47,9 @@ const OrderTab = () => {
     )
     return (
         <SafeAreaView className='h-full w-full bg-white p-2 pt-8 flex flex-col'>
-            <View className='flex flex-row flex-1  w-full items-center bg-white my-2 border-b-[1px] border-gray-500'>
-                <View className='bg-gray-200 w-10 h-10 rounded-md flex items-center justify-center'>
-                    <AntDesign name='arrowleft' size={15} color={"#f7941d"} />
+            <View className='flex flex-row flex-1  w-full items-center bg-white my-2 border-b-[2px] border-[#f7f7fa]'>
+                <View className='bg-[#f7f7fa] w-10 h-10 rounded-md flex items-center justify-center'>
+                    <AntDesign name='arrowleft' size={25} color={"#f7941d"} />
                 </View>
                 <SearchComponent handleChange={(e: any) => setSearchQuery(e)} value={query} placeHolder='Search...' />
             </View>

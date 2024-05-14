@@ -25,7 +25,10 @@ module.exports = {
                     100: "#233363",
                     200: "#2e3235",
                     300: "#fffffe"
-                }
+                },
+                green: {
+                    100: "#25d482"
+                },
             },
             fontFamily: {
                 pthin: ["Poppins-Thin", "sans-serif"],

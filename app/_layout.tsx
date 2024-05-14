@@ -36,6 +36,7 @@ export default function RootLayout() {
         <Stack.Screen name="chooseDestination" options={{ headerShown: false }} />
         <Stack.Screen name="paymentConfirmation" options={{ headerShown: false }} />
         <Stack.Screen name="Rating" options={{ headerShown: false }} />
+        <Stack.Screen name="Payment" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
 
       </Stack>
