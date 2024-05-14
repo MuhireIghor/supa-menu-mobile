@@ -60,7 +60,7 @@ const CartTab = () => {
 
                 ListFooterComponent={() => {
                     return (
-                        <View className='w-full flex flex-col gap-y-2 px-4'>
+                        <View className='w-full flex flex-col gap-y-2 px-4 pb-20'>
                             <View className='flex flex-row justify-center'>
                                 <View className='flex flex-row gap-x-1 items-center'>
                                     <Text className='text-xl text-primary font-bold'>more drinks</Text>
@@ -72,7 +72,7 @@ const CartTab = () => {
 
                             </View>
                             <View>
-                                <CustomButton onPress={() => router.push("/Payment")} text='Proceed to checkout' textStyles='text-white p-2 text-center text-lg' className='py-8 rounded-2xl' />
+                                <CustomButton onPress={() => router.push("/Payment")} text='Proceed to checkout' textStyles='text-white p-2 text-center text-lg' otherStyle='py-8 rounded-2xl' />
                             </View>
                        
 

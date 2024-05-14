@@ -6,8 +6,8 @@ export interface IMobileProviderProps {
 }
 const MobileProviderComponent: FC<IMobileProviderProps> = (prop) => {
     return (
-        <Pressable  className="flex flex-row justify-between items-center py-3 w-3/4 mx-auto">
-            <Image className="w-20 h-20" resizeMode="contain" source={prop.image} />
+        <Pressable  className="flex flex-row justify-between items-center py-2 w-3/4 mx-auto">
+            <Image className="w-16 h-16" resizeMode="contain" source={prop.image} />
             <Text className="text-black text-md">{prop.serviceProvider}</Text>
         </Pressable>
     )

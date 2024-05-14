@@ -20,7 +20,7 @@ const Login = () => {
                 <CustomField icon={<FontAwesome5 color={"#a6adc0"} name='envelope' size={20} />} handleChange={(e: any) => setForm({ ...form, email: e })} value={form.email} placeHolder='Your Email' keyboardType='email-address' />
                 <CustomField icon={<Ionicons color={"#a6adc0"} name='lock-closed' size={20} />} handleChange={(e: any) => setForm({ ...form, password: e })} value={form.password} placeHolder='Password' secureTextEntry={true} />
             </View>
-            <CustomButton text='Sign In' textStyles='text-white text-center text-lg font-semibold' className="font-medium  bg-primary rounded-xl w-full" onPress={() => { }} />
+            <CustomButton onPress={()=>{}} text='Sign In' textStyles='text-white text-center text-lg font-semibold' otherStyle="font-medium  bg-primary rounded-xl w-full"  />
             <Link href={"/signup"} className='text-primary font-medium text-lg text-center'>Forgot password</Link>
             <View className='flex flex-row justify-center gap-x-1'>
                 <Text className='text-gray-100 text-lg '>Don&apos; have an account?</Text>

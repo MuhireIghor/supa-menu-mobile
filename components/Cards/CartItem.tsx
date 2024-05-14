@@ -36,7 +36,7 @@ const CartItem: FC<ICartItemProp> = (prop) => {
                     </View>
                     <View className="w-full flex flex-row justify-between">
                         <Text className="text-primary text-lg font-semibold">Frw {prop.unitPrice * quantity}</Text>
-                        <View className="bg-white p-1 w-20 rounded-md flex flex-row justify-between items-center gap-x-3">
+                        <View className="bg-white p-1 px-4 mr-2 w-24 rounded-md flex flex-row justify-between items-center gap-x-3 z-30">
                             <TouchableOpacity onPress={handleDecrease} ><Text className="text-primary text-xl">-</Text></TouchableOpacity>
                             <Text className="text-lg text-black font-semibold">{quantity}</Text>
                             <TouchableOpacity onPress={handleIncrease} ><Text className="text-primary text-xl">+</Text></TouchableOpacity>

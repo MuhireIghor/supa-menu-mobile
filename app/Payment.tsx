@@ -6,6 +6,7 @@ import CustomButton, { Button } from '@/components/Button'
 import MobileProviderComponent, { IMobileProviderProps } from '@/components/Cards/MobileProvider'
 import mtn from "@/assets/images/mtn.png";
 import airtel from "@/assets/images/airtel.jpg";
+import { router } from 'expo-router'
 
 
 const Payment = () => {
@@ -30,7 +31,7 @@ const Payment = () => {
                     <AntDesign name='arrowleft' size={25} color={"#25d482"} />
                 </View>
             </View>
-            <View className='h-full  shadow-md gap-y-5  shadow-green-100 py-4'>
+            <View className='h-full  shadow-md gap-y-5  shadow-green-100 py-2'>
                 <View className='w-full flex flex-row  justify-between items-center'>
                     <View className='flex flex-row  items-center'>
                         <Text className='text-black text-2xl font-bold'>Checkout</Text>
@@ -56,7 +57,7 @@ const Payment = () => {
 
                 <Text className='text-center text-gray-200 text-sm px-[12%]'>We will send you an order details to your email after the successfull payment.</Text>
                 <View className='flex flex-1 w-full'>
-                    <Button icon={<AntDesign name='lock' color={"#ffffff"} size={25} />} text='Pay for the order' otherStyle='bg-green-100 rounded-lg h-[50px]  flex flex-row justify-center w-full gap-x-2 mx-auto items-center ' onPress={() => { }} textStyles='text-white text-xl font-bold' />
+                    <Button icon={<AntDesign name='lock' color={"#ffffff"} size={25} />} text='Pay for the order' otherStyle='bg-green-100 rounded-lg h-[50px]  flex flex-row justify-center w-full gap-x-2 mx-auto items-center ' onPress={() => router.push("/paymentConfirmation")} textStyles='text-white text-xl font-bold' />
                 </View>
             </View>
             <StatusBar backgroundColor={"#ffffff"} barStyle={"dark-content"} />
