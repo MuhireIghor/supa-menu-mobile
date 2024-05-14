@@ -1,8 +1,8 @@
 import { FC } from "react";
-import { Text, TouchableOpacity } from "react-native";
+import { Pressable, Text, TouchableOpacity } from "react-native";
 
 interface IButtonProps {
-    className?: string;
+    otherStyle?: string;
     onPress: () => void;
     text: string;
     icon?: any;
@@ -11,9 +11,19 @@ interface IButtonProps {
 const CustomButton: FC<IButtonProps> = (prop) => {
 
     return (
-        <TouchableOpacity className={`${prop.className} w-full bg-primary p-2 rounded-lg`} onPress={prop.onPress} >
+        <TouchableOpacity className={`${prop.otherStyle} w-full bg-primary p-2 rounded-lg`} onPress={prop.onPress} >
             <Text className={prop.textStyles}>{prop.text}</Text>
         </TouchableOpacity>
     )
 }
-export default CustomButton; 
+export default CustomButton;
+export const Button: FC<IButtonProps> = (prop) => {
+    return (
+        <Pressable className={prop.otherStyle} onPress={prop.onPress} >
+            {
+                prop.icon
+            }
+            <Text className={prop.textStyles}>{prop.text}</Text>
+        </Pressable >
+    )
+}
