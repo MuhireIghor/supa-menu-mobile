@@ -4,6 +4,7 @@ import BotAPp from "@/assets/images/botApp.png"
 import { StatusBar } from "expo-status-bar";
 import { Ionicons } from "@expo/vector-icons";
 import CustomButton from "@/components/Button";
+import { router } from "expo-router";
 
 const PaymentConfirmationScreen = () => {
     return (
@@ -25,7 +26,7 @@ const PaymentConfirmationScreen = () => {
                         <Ionicons color={"#d98155"} size={20} name="arrow-forward" />
                     </View>
                     <View className="mb-6">
-                    <CustomButton textStyles='text-white p-1 text-center text-lg font-bold' text="Download Invoice" onPress={() => { }} />
+                        <CustomButton textStyles='text-white p-1 text-center text-lg font-bold' text="Download Invoice" onPress={() => router.push("/Rating")} />
                     </View>
                     <View className="flex flex-row justify-center ">
                         <Text className="text-white font-extrabold text-4xl">SUPA</Text>
