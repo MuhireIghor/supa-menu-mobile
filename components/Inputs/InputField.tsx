@@ -13,7 +13,7 @@ interface ICustonFieldProps {
 }
 const CustomField: FC<ICustonFieldProps> = (prop) => {
     return (
-        <View className="bg-white border-[0.6px] w-full border-gray-100 rounded flex-row items-center gap-x-1 my-4">
+        <View className={`"bg-white w-full border-[0.6px]  border-gray-100 rounded flex-row items-center gap-x-1 my-4 ${prop.className}`}>
             {
                 prop.icon && <View className="p-2">{prop.icon}</View>
             }

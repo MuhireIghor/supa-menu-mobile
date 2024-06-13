@@ -6,8 +6,7 @@ import React, { useState } from 'react';
 import { TabBarIcon } from '@/components/navigation/TabBarIcon';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
-import { View } from 'react-native';
-import SearchComponent from '@/components/SearchField';
+
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();

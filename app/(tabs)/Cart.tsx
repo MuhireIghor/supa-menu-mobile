@@ -44,7 +44,7 @@ const CartTab = () => {
             <FlatList
                 ListHeaderComponent={() => {
                     return (
-                        <View className='w-full flex flex-row justify-end'>
+                        <View className='w-full flex flex-row justify-end mt-6'>
                             <View className='flex flex-col p-4'>
                                 <Text className='font-semibold text-2xl text-blue-200 pl-6 '>Choose Kigali</Text>
                                 <Text className='text-2xl font-light text-primary pl-6'>Drinks</Text>
@@ -55,7 +55,8 @@ const CartTab = () => {
                 data={items}
                 keyExtractor={(item) => item.id}
                 renderItem={renderItem}
-                className=''
+                showsVerticalScrollIndicator={false}
+                className='h-[95%] absolute '
 
 
                 ListFooterComponent={() => {
