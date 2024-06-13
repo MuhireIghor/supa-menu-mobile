@@ -7,19 +7,20 @@ interface IButtonProps {
     text: string;
     icon?: any;
     textStyles?: string;
+    isLoading?:boolean;
 }
 const CustomButton: FC<IButtonProps> = (prop) => {
 
     return (
-        <TouchableOpacity className={`${prop.otherStyle} w-full bg-primary p-2 rounded-lg`} onPress={prop.onPress} >
-            <Text className={prop.textStyles}>{prop.text}</Text>
+        <TouchableOpacity activeOpacity={0.2} className={`${prop.otherStyle} w-full bg-primary p-2 rounded-lg`} onPress={prop.onPress} >
+            <Text className={prop.textStyles}>{prop.isLoading!! && prop.isLoading ? 'Loading...': prop.text}</Text>
         </TouchableOpacity>
     )
 }
 export default CustomButton;
 export const Button: FC<IButtonProps> = (prop) => {
     return (
-        <Pressable className={prop.otherStyle} onPress={prop.onPress} >
+        <Pressable  className={prop.otherStyle} onPress={prop.onPress} >
             {
                 prop.icon
             }
